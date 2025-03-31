@@ -15,9 +15,20 @@ slorber:
   image_url: https://github.com/slorber.png
   page:
     # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
+    permalink: "/all-sebastien-lorber-articles"
   socials:
     x: sebastienlorber
     linkedin: sebastienlorber
     github: slorber
     newsletter: https://thisweekinreact.com
+
+virtualabishek:
+  name: Abishek Neupane
+  title: Software Engineer
+  url: https://github.com/virtualabishek
+  image_url: https://github.com/virtualabishek.png
+  page: true
+  socials:
+    github: virtualabishek
+    linkedin: virtualabishek
+    twitter: virtualabishek
