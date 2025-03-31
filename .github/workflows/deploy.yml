@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy Blog to GitHub Pages
 
 on:
   push:
@@ -24,7 +24,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Node
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -42,7 +42,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: "./dist"
+          path: "./build"
 
       - name: Deploy to GitHub Pages
         id: deployment
