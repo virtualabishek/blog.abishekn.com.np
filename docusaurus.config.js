@@ -6,13 +6,12 @@ const config = {
   tagline: "My Thoughts and Technical Writings",
   favicon: "img/favicon.ico",
 
-  // Production URL
+  // Update these settings for GitHub Pages
   url: "https://blog.abishekn.com.np",
   baseUrl: "/",
-
-  // GitHub config
-  organizationName: "virtualabishek",
-  projectName: "blog",
+  organizationName: "virtualabishek", // GitHub username
+  projectName: "blog.abishekn.com.np", // GitHub repo name
+  deploymentBranch: "gh-pages",
   trailingSlash: false,
 
   // Site config
