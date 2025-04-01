@@ -1,19 +1,9 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+technical:
+  label: Technical
+  permalink: /technical
+  description: You can find all technical related blogs here.
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
-
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
-
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+non-technical:
+  label: Non Technical
+  permalink: /non-technical
+  description: You can find all non-technical related blogs here.

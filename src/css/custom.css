@@ -4,8 +4,13 @@
  * work well for content-centric websites.
  */
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Calistoga&display=swap");
+
 /* You can override the default Infima variables here. */
 :root {
+  --ifm-font-family-base: "Inter", system-ui, -apple-system, sans-serif;
+  --ifm-font-family-monospace: "SFMono-Regular", "Roboto Mono", monospace;
+  --ifm-heading-font-family: "Calistoga", serif;
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -18,7 +23,7 @@
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+[data-theme="dark"] {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;

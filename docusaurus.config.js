@@ -54,7 +54,7 @@ const config = {
         title: "Abishek's Blog",
         logo: {
           alt: "Blog Logo",
-          src: "img/logo.svg",
+          src: "img/navbarLogo.png",
         },
         items: [
           { to: "/blog", label: "Blog", position: "left" },
@@ -110,6 +110,12 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
+      metadata: [
+        {
+          name: "google-fonts",
+          content: "Inter:400,500,600,700|Calistoga",
+        },
+      ],
     }),
 };
 
