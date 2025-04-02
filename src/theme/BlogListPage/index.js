@@ -31,37 +31,83 @@ function BlogListPageMetadata(props) {
 }
 
 function BlogPostCard({ item }) {
-  if (!item?.content) {
-    return null;
-  }
+  if (!item?.content) return null;
 
   const {
     content: BlogPostContent,
     content: { metadata, frontMatter },
   } = item;
 
-  const { title, description, date, formattedDate, permalink } = metadata;
+  const { title, description, date, formattedDate, permalink, tags, authors } =
+    metadata;
 
-  const image = frontMatter.image || "/img/default-blog-image.jpg";
+  const getAuthorDetails = (author) => {
+    if (typeof author === "object") {
+      return {
+        name: author.name,
+        imageUrl: author.imageURL || `https://github.com/${author.name}.png`,
+      };
+    }
+    return {
+      name: author,
+      imageUrl: `https://github.com/${author}.png`,
+    };
+  };
 
   return (
     <article className={styles.blogCard}>
-      <Link to={permalink} className={styles.cardLink}>
-        <div className={styles.cardImage}>
-          <img src={image} alt={title} loading="lazy" />
-        </div>
-        <div className={styles.cardContent}>
-          <h2 className={styles.cardTitle}>{title}</h2>
-          {description && (
-            <p className={styles.cardDescription}>{description}</p>
+      {/* Main card content */}
+      <div className={styles.cardContent}>
+        <Link to={permalink} className={styles.cardTitle}>
+          <h2>{title}</h2>
+        </Link>
+
+        {description && <p className={styles.cardDescription}>{description}</p>}
+
+        <div className={styles.cardMeta}>
+          {/* Authors section */}
+          {authors && authors.length > 0 && (
+            <div className={styles.cardAuthor}>
+              {authors.map((author) => {
+                const { name, imageUrl } = getAuthorDetails(author);
+                return (
+                  <div key={name} className={styles.authorInfo}>
+                    <img
+                      src={imageUrl}
+                      alt={name}
+                      className={styles.authorAvatar}
+                      onError={(e) => {
+                        e.target.src = "https://github.com/github.png";
+                      }}
+                    />
+                    <span className={styles.authorName}>{name}</span>
+                  </div>
+                );
+              })}
+            </div>
           )}
-          <div className={styles.cardMeta}>
-            {formattedDate && (
-              <span className={styles.cardDate}>{formattedDate}</span>
-            )}
-          </div>
+
+          {/* Date */}
+          {formattedDate && (
+            <span className={styles.cardDate}>{formattedDate}</span>
+          )}
+
+          {/* Tags */}
+          {tags && tags.length > 0 && (
+            <div className={styles.cardTags}>
+              {tags.map((tag) => (
+                <Link
+                  key={tag.label}
+                  to={tag.permalink}
+                  className={styles.cardTag}
+                >
+                  {tag.label}
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
-      </Link>
+      </div>
     </article>
   );
 }
