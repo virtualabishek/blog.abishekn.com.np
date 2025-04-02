@@ -1,0 +1,176 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1rem;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.navbarGlow {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    var(--ifm-color-primary) 10%,
+    transparent 50%
+  );
+  opacity: 0.2;
+  transform: translateX(-50%);
+  pointer-events: none;
+  animation: glowPulse 6s infinite ease-in-out;
+}
+
+.navbarContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbarBrand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--ifm-navbar-link-color);
+}
+
+.brandText {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.brandDot {
+  width: 8px;
+  height: 8px;
+  background: var(--ifm-color-primary);
+  border-radius: 50%;
+  animation: bounce 2s infinite;
+}
+
+.navItems {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navLink {
+  position: relative;
+  text-decoration: none;
+  color: var(--ifm-navbar-link-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: var(--ifm-color-primary);
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.linkIcon {
+  transition: transform 0.3s ease;
+}
+
+.navLink:hover .linkIcon {
+  transform: translate(4px, -4px);
+}
+
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.themeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding: 0.5rem;
+}
+
+.themeIcon {
+  font-size: 1.25rem;
+  transition: transform 0.5s ease;
+}
+
+.themeToggle:hover .themeIcon {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+  .menuButton {
+    display: block;
+  }
+
+  .navItems {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--ifm-navbar-background-color);
+    padding: 1rem;
+    backdrop-filter: blur(10px);
+    animation: slideIn 0.3s ease-out;
+  }
+
+  .show {
+    display: flex;
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,9 +1,9 @@
 technical:
   label: Technical
-  permalink: /technical
+  permalink: /blog/tags/technical
   description: You can find all technical related blogs here.
 
 non-technical:
   label: Non Technical
-  permalink: /non-technical
+  permalink: /blog/tags/non-technical
   description: You can find all non-technical related blogs here.

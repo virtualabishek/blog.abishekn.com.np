@@ -1,64 +1,67 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import React from "react";
+import clsx from "clsx";
+import Link from "@docusaurus/Link";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Heading from "@theme/Heading";
+import styles from "./styles.module.css";
 
-const FeatureList = [
-  {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
-  },
-  {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
-  },
-  {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
-  },
-];
-
-function Feature({Svg, title, description}) {
+function HeroSection() {
+  const { siteConfig } = useDocusaurusContext();
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+    <section className={styles.hero}>
+      <div className={styles.heroGlow}></div>
+      <div className={styles.heroContent}>
+        <h1 className={styles.heroTitle}>
+          Welcome to My Blog <span className={styles.wave}>✍️</span>
+        </h1>
+        <p className={styles.heroSubtitle}>
+          Hey, I’m Abishek! This is where I write about{" "}
+          <span className={styles.highlight}>tech adventures</span>,{" "}
+          <span className={styles.highlight}>life moments</span>, and random
+          thoughts.
+        </p>
+        <Link to="/blog" className={styles.heroButton}>
+          Dive into the Posts
+        </Link>
       </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
-    </div>
+    </section>
   );
 }
 
-export default function HomepageFeatures() {
+function AboutBlog() {
   return (
-    <section className={styles.features}>
+    <section className={styles.about}>
       <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
+        <Heading as="h2" className={styles.aboutTitle}>
+          About This Blog
+        </Heading>
+        <div className={styles.aboutContent}>
+          <p>
+            This isn’t just another tech blog. Here, you’ll find a mix of{" "}
+            <strong>coding tutorials</strong>, personal{" "}
+            <strong>life updates</strong>, and some{" "}
+            <strong>non-technical musings</strong>—all straight from my head to
+            your screen. Whether I’m debugging code, reflecting on life, or
+            sharing a random story, this space is my creative outlet.
+          </p>
+          <p>
+            Want to know more about me? Check out my{" "}
+            <Link to="https://abishekn.com.np" className={styles.aboutLink}>
+              portfolio
+            </Link>{" "}
+            for the professional stuff. This blog is where I let loose!
+          </p>
         </div>
       </div>
     </section>
+  );
+}
+
+export default function Homepage() {
+  return (
+    <main>
+      <HeroSection />
+      <AboutBlog />
+    </main>
   );
 }

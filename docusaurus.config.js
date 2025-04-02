@@ -2,7 +2,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Abishek Neupane's Blog",
+  title: "Abi's Blog",
   tagline: "My Thoughts and Technical Writings",
   favicon: "img/favicon.ico",
 
@@ -31,9 +31,13 @@ const config = {
         docs: false, // Disable docs since you're only using blog
         blog: {
           showReadingTime: true,
-          // Remove editUrl if you don't want "Edit this page" links
           blogSidebarTitle: "All posts",
           blogSidebarCount: "ALL",
+          path: "blog", // Make sure this points to your blog directory
+          routeBasePath: "blog", // This ensures /blog route works
+          postsPerPage: 10,
+          blogTitle: "Abishek's Blog",
+          blogDescription: "My Thoughts and Technical Writings",
           feedOptions: {
             type: ["rss", "atom"],
             copyright: `Copyright © ${new Date().getFullYear()} Abishek Neupane`,
