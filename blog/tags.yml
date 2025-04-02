@@ -7,3 +7,8 @@ non-technical:
   label: Non Technical
   permalink: /blog/tags/non-technical
   description: You can find all non-technical related blogs here.
+
+philosophy:
+  label: Philosophy
+  permalink: /blog/tags/philosophy
+  description: You can find all Philosophy related blogs here.
