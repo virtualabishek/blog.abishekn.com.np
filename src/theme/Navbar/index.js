@@ -68,6 +68,7 @@ export default function Navbar() {
               to={item.to}
               href={item.href}
               className={styles.navLink}
+              onClick={() => setIsMenuOpen(false)}
             >
               <span className={styles.linkText}>{item.label}</span>
               {item.href && <ArrowUpRightIcon className={styles.linkIcon} />}
