@@ -42,7 +42,8 @@ export default function Footer() {
             © {new Date().getFullYear()} {siteConfig.title}
           </span>
           <span className={styles.builtWith}>
-            Built with <span className={styles.heart}>❤️</span> using Docusaurus
+            Built with <span className={styles.heart}>❤️</span> by{" "}
+            <a href="https://abishekn.com.np">Abishek</a>
           </span>
         </div>
       </div>

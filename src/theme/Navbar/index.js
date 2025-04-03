@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { useColorMode } from "@docusaurus/theme-common";
@@ -38,6 +38,15 @@ export default function Navbar() {
   const { siteConfig } = useDocusaurusContext();
   const { colorMode, setColorMode } = useColorMode();
 
+  // Close menu when clicking outside
+  useEffect(() => {
+    const closeMenu = () => setIsMenuOpen(false);
+    if (isMenuOpen) {
+      document.addEventListener("click", closeMenu);
+    }
+    return () => document.removeEventListener("click", closeMenu);
+  }, [isMenuOpen]);
+
   const navItems = [
     { label: "Blog", to: "/blog" },
     { label: "Portfolio", href: "https://abishekn.com.np" },
@@ -45,17 +54,18 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.navbarGlow}></div>
+    <nav className={`${styles.navbar} ${isMenuOpen ? styles.menuOpen : ""}`}>
       <div className={styles.navbarContent}>
         <Link to="/" className={styles.navbarBrand}>
           <span className={styles.brandText}>{siteConfig.title}</span>
-          <span className={styles.brandDot}></span>
         </Link>
 
         <button
           className={styles.menuButton}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={(e) => {
+            e.stopPropagation();
+            setIsMenuOpen(!isMenuOpen);
+          }}
           aria-label="Toggle menu"
         >
           {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
@@ -68,8 +78,9 @@ export default function Navbar() {
               to={item.to}
               href={item.href}
               className={styles.navLink}
+              onClick={() => setIsMenuOpen(false)}
             >
-              <span className={styles.linkText}>{item.label}</span>
+              {item.label}
               {item.href && <ArrowUpRightIcon className={styles.linkIcon} />}
             </Link>
           ))}
@@ -80,9 +91,7 @@ export default function Navbar() {
             }
             aria-label="Toggle theme"
           >
-            <span className={styles.themeIcon}>
-              {colorMode === "dark" ? "☀️" : "🌙"}
-            </span>
+            {colorMode === "dark" ? "☀️" : "🌙"}
           </button>
         </div>
       </div>
