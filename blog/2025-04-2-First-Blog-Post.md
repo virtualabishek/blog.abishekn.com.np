@@ -1,15 +1,17 @@
 ---
 slug: too-much-philosophy
 title: "Too Much Philosophy, Not Enough Presence"
-date: "2025-04-02"
 authors: [virtualabishek]
+date: "2025-04-02"
 description: "A reflection on the balance between thinking and truly living."
 tags: [philosophy, non-technical]
 ---
 
 # Too Much Philosophy, Not Enough Presence
 
-Recently, I stumbled across a post on X that really hit me:
+Recently, I stumbled across a post on X that really hit me.
+
+<!-- truncate -->
 
 <blockquote className="twitter-tweet">
   <p lang="zxx" dir="ltr">

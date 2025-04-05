@@ -3,6 +3,26 @@ technical:
   permalink: /blog/tags/technical
   description: You can find all technical related blogs here.
 
+linux:
+  label: Linux
+  permalink: /blog/tags/linux
+  description: Linux-related posts and tutorials.
+
+wsl:
+  label: WSL
+  permalink: /blog/tags/wsl
+  description: Posts about Windows Subsystem for Linux.
+
+windows:
+  label: Windows
+  permalink: /blog/tags/windows
+  description: Windows-related content and tips.
+
+development:
+  label: Development
+  permalink: /blog/tags/development
+  description: Software development practices and experiences.
+
 non-technical:
   label: Non Technical
   permalink: /blog/tags/non-technical
