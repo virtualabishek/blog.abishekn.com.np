@@ -1,15 +1,17 @@
 ---
 slug: too-much-philosophy
 title: "Too Much Philosophy, Not Enough Presence"
-date: "2025-04-02"
 authors: [virtualabishek]
+date: "2025-04-02"
 description: "A reflection on the balance between thinking and truly living."
 tags: [philosophy, non-technical]
 ---
 
 # Too Much Philosophy, Not Enough Presence
 
-Recently, I stumbled across a post on X that really hit me:
+Recently, I stumbled across a post on X that really hit me.
+
+<!-- truncate -->
 
 <blockquote className="twitter-tweet">
   <p lang="zxx" dir="ltr">
@@ -26,7 +28,7 @@ The caption was simple: **"Too much philosophy, not enough presence."** And hone
 
 A while back, I wrote something that ties into this. It went like this:
 
-> "These days, the internet is overflowing with inspirational quotes, movies, and posts. But what really matters is how much you actually live them, not just how much you scroll through or watch. Nothing lasts forever—not your beliefs, your motivations, or even your favorite sayings. Maybe they stick with you when you’re feeling on top of the world. But when you’re down, lost, or upset, I bet you forget all about that spark."
+> "These days, the internet is full of inspirational sayings, movies, and postings. However, what matters most is how much you use them in your life, regardless of how much you read or watch. Nothing is permanent, not even your beliefs, driving forces, or favorite quotations. Maybe you only remember them when you're in a good mood. When you're feeling down or unhappy, I'm sure you lose sight of your motivation."
 
 You can read more of my ramblings here: [abishekn.com.np/perspective](https://abishekn.com.np/perspective).
 
