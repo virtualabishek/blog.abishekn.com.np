@@ -38,11 +38,11 @@ function AboutBlog() {
         <div className={styles.aboutContent}>
           <p>
             This isn’t just another tech blog. Here, you’ll find a mix of{" "}
-            <strong>coding tutorials</strong>, personal{" "}
+            <strong>techincal stuffs</strong>, personal{" "}
             <strong>life updates</strong>, and some{" "}
             <strong>non-technical musings</strong>—all straight from my head to
-            your screen. Whether I’m debugging code, reflecting on life, or
-            sharing a random story, this space is my creative outlet.
+            your screen. Whether I'm doing code, reflecting on life, or sharing
+            a random story, this space is my creative outlet.
           </p>
           <p>
             Want to know more about me? Check out my{" "}
