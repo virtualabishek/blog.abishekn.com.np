@@ -1,15 +1,39 @@
 .navbar {
-  position: sticky;
+  position: fixed; /* Change from sticky to fixed */
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 200;
   background: var(--ifm-navbar-background-color);
   border-bottom: 1px solid var(--ifm-color-emphasis-200);
   backdrop-filter: blur(10px);
   height: var(--ifm-navbar-height);
+  transition: transform 0.2s ease;
 }
 
 [data-theme="dark"] .navbar {
   background: rgba(0, 0, 0, 0.8);
+}
+
+:global(body) {
+  padding-top: var(--ifm-navbar-height);
+}
+
+.navbarGlow {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    var(--ifm-color-primary) 10%,
+    transparent 50%
+  );
+  opacity: 0.2;
+  transform: translateX(-50%);
+  pointer-events: none;
+  animation: glowPulse 6s infinite ease-in-out;
 }
 
 .navbarContent {
@@ -37,14 +61,18 @@
   letter-spacing: -0.5px;
 }
 
+.brandDot {
+  width: 8px;
+  height: 8px;
+  background: var(--ifm-color-primary);
+  border-radius: 50%;
+  animation: bounce 2s infinite;
+}
+
 .navItems {
   display: flex;
   align-items: center;
-  gap: 1.5rem !important; /* Ensure spacing between items */
-}
-
-.customNavbar .navItems {
-  gap: 1.5rem !important; /* Additional specificity for custom Navbar */
+  gap: 1.5rem;
 }
 
 .navLink {
@@ -68,7 +96,7 @@
   height: 2px;
   background-color: var(--ifm-color-primary);
   transition: width 0.3s ease;
-  z-index: 1;
+  z-index: 1; /* Keep the line below text */
 }
 
 .navLink:hover {
@@ -109,8 +137,17 @@
   transition: color 0.2s ease;
 }
 
+.themeIcon {
+  font-size: 1.25rem;
+  transition: transform 0.5s ease;
+}
+
 .themeToggle:hover {
   color: var(--ifm-color-primary);
+}
+
+.themeToggle:hover .themeIcon {
+  transform: rotate(180deg);
 }
 
 @media (max-width: 768px) {
@@ -127,7 +164,7 @@
     padding: 1rem;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem !important;
+    gap: 1rem;
     border-bottom: 1px solid var(--ifm-color-emphasis-200);
     backdrop-filter: blur(10px);
     display: none;
@@ -144,5 +181,36 @@
 
   [data-theme="dark"] .navItems {
     background: rgba(36, 37, 38, 0.9);
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
