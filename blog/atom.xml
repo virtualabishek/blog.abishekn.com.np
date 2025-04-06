@@ -10,16 +10,16 @@
     <rights>Copyright © 2025 Abishek Neupane</rights>
     <entry>
         <title type="html"><![CDATA[My Linux Journey and the Power of WSL]]></title>
-        <id>https://blog.abishekn.com.np/blog/my-wsl-and-linux-journey</id>
-        <link href="https://blog.abishekn.com.np/blog/my-wsl-and-linux-journey"/>
+        <id>https://blog.abishekn.com.np/blog/linux-and-wsl-journeys</id>
+        <link href="https://blog.abishekn.com.np/blog/linux-and-wsl-journeys"/>
         <updated>2025-04-02T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Exploring Linux, distro-hopping, and how WSL changed my development workflow.]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="introduction">Introduction<a href="https://blog.abishekn.com.np/blog/my-wsl-and-linux-journey#introduction" class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction">​</a></h2>
-<p>If you’ve ever wondered about dipping your toes into Linux without leaving the comfort of Windows, you’re in good company. I’m no tech wizard—just someone who’s explored operating systems with curiosity and a bit of trial-and-error.
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="introduction">Introduction<a href="https://blog.abishekn.com.np/blog/linux-and-wsl-journeys#introduction" class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction">​</a></h2>
+<p>If you’ve ever wondered about dipping your toes into Linux without leaving the comfort of Windows, you’re in good company. I’m not experienced one but someone who’s explored operating systems with curiosity and a bit of trial-and-error.
 In this post, I’ll walk you through my Linux journey, from my early experiments to finding Windows Subsystem for Linux (WSL). It’s been quite a ride, and I hope sharing it sparks something for you.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="my-story-with-linux-and-wsl">My Story with Linux and WSL<a href="https://blog.abishekn.com.np/blog/my-wsl-and-linux-journey#my-story-with-linux-and-wsl" class="hash-link" aria-label="Direct link to My Story with Linux and WSL" title="Direct link to My Story with Linux and WSL">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="my-story-with-linux-and-wsl">My Story with Linux and WSL<a href="https://blog.abishekn.com.np/blog/linux-and-wsl-journeys#my-story-with-linux-and-wsl" class="hash-link" aria-label="Direct link to My Story with Linux and WSL" title="Direct link to My Story with Linux and WSL">​</a></h2>
 <p>For anyone new to the term, <strong>Windows Subsystem for Linux (WSL)</strong> is a feature that lets you run a Linux environment right on your Windows machine. No need for a separate virtual machine or dual-boot setup—it’s a seamless way to blend the best of both worlds, especially for developers.</p>
-<p>My Linux adventure kicked off years ago, thanks to my friend <strong>Acyut Dai</strong>, who first showed me the ropes. I was hooked right away, even if I didn’t fully grasp the technical side back then. One memory stands out: I went to a shop to buy a laptop and asked for <strong>Linux Mint</strong> instead of Windows. The salesperson was caught off guard—probably not a request he got every day. After some discussion and a quick call to tech support, he got it installed. That was my launchpad into the Linux world.</p>
+<p>My Linux adventure kicked off years ago, thanks to my brother <strong>Acyut Dai</strong>, who first showed me the ropes. I was hooked right away, even if I didn’t fully grasp the technical side back then. One memory stands out: I went to a shop to buy a laptop and asked for <strong>Linux Mint</strong> instead of Windows. The salesperson was caught off guard—probably not a request he got every day. That was my launchpad into the Linux world.</p>
 <p>With <strong>Linux Mint</strong> on my laptop, I dove in, exploring its features for hours. Truth be told, I didn’t have a strong grip on the basics. Over time, I bounced between <strong>12 to 15 different Linux distributions</strong>, chasing the next shiny thing without really mastering any of them. Looking back, I was more caught up in the excitement than in laying a solid groundwork.</p>
 <p>Fast forward a bit, and I got access to Windows developer features, which led me to <strong>WSL</strong>. It was a total game-changer. Suddenly, I felt more productive, blending Linux tools into my Windows routine effortlessly. I think Windows saw how much developers were leaning toward Linux and built WSL to meet that need. It’s pretty powerful—think installing packages with a quick <code>sudo apt install</code> instead of wrestling with Windows-specific headaches.</p>
 <p>I’ve never fully clicked with Windows’ own command-line tools, though that’s probably on me for not digging deeper. Windows is great for tons of people; WSL just smooths out certain tasks for me.</p>
@@ -30,7 +30,7 @@ In this post, I’ll walk you through my Linux journey, from my early experiment
 <li><strong>Storage Smarts</strong>: From what I’ve seen, WSL handles storage for code and modules pretty efficiently compared to a full Linux setup (though your mileage might vary).</li>
 </ul>
 <p>There’s tons more to dig into, and I’d love to hear what you think about WSL if you’ve tried it!</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a href="https://blog.abishekn.com.np/blog/my-wsl-and-linux-journey#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a href="https://blog.abishekn.com.np/blog/linux-and-wsl-journeys#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion">​</a></h2>
 <p>Looking back, WSL has become a key part of my development toolkit. It ties Windows and Linux together, letting me tap into both without the chaos of my distro-hopping phase. My Linux days taught me to <strong>stay focused while learning</strong>, and WSL keeps me grounded.</p>
 <p>If you haven’t checked it out yet, <strong>give it a whirl!</strong> Already a user? I’d love your thoughts. Thanks for reading my first post—more to come!</p>]]></content>
         <author>
