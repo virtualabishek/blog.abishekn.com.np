@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { useColorMode } from "@docusaurus/theme-common";
@@ -38,15 +38,6 @@ export default function Navbar() {
   const { siteConfig } = useDocusaurusContext();
   const { colorMode, setColorMode } = useColorMode();
 
-  // Close menu when clicking outside
-  useEffect(() => {
-    const closeMenu = () => setIsMenuOpen(false);
-    if (isMenuOpen) {
-      document.addEventListener("click", closeMenu);
-    }
-    return () => document.removeEventListener("click", closeMenu);
-  }, [isMenuOpen]);
-
   const navItems = [
     { label: "Blog", to: "/blog" },
     { label: "Portfolio", href: "https://abishekn.com.np" },
@@ -54,7 +45,12 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className={`${styles.navbar} ${isMenuOpen ? styles.menuOpen : ""}`}>
+    <nav
+      className={`${styles.navbar} navbar customNavbar ${
+        isMenuOpen ? styles.menuOpen : ""
+      }`}
+      aria-label="Main navigation"
+    >
       <div className={styles.navbarContent}>
         <Link to="/" className={styles.navbarBrand}>
           <span className={styles.brandText}>{siteConfig.title}</span>
