@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkblog_site=self.webpackChunkblog_site||[]).push([[146],{9328:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"My Thoughts and Technical Writings","blogTitle":"Abishek\'s Blog"}}')}}]);
