@@ -2,12 +2,43 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.abishekn.com.np/blog</id>
     <title>Abi's Blog Blog</title>
-    <updated>2025-04-27T00:00:00.000Z</updated>
+    <updated>2025-07-06T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.abishekn.com.np/blog"/>
     <subtitle>Abi's Blog Blog</subtitle>
     <icon>https://blog.abishekn.com.np/img/favicon.ico</icon>
     <rights>Copyright © 2025 Abishek Neupane</rights>
+    <entry>
+        <title type="html"><![CDATA[Tech Wisdom and Village realitie]]></title>
+        <id>https://blog.abishekn.com.np/blog/tech-wisdom-from-a-85-year-old-buwa</id>
+        <link href="https://blog.abishekn.com.np/blog/tech-wisdom-from-a-85-year-old-buwa"/>
+        <updated>2025-07-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Tech Wisdom by 85 years old man and village realities]]></summary>
+        <content type="html"><![CDATA[<p>Okay, so here's the real talk: I always imagined villages as disciplined, polite, and honest places. But after a four-day tour to a rural area of Nepal, I've come to realize that villages can actually be more challenging than urban areas. It was quite a shock; everyone seemed to be comparing themselves to each other and constantly getting into conflicts. I stayed in more than six different houses, and almost every single one had some kind of underlying problem.</p>
+<p>Let me share some profound truths I learned from an 82-year-old man:</p>
+<blockquote>
+<ul>
+<li><strong>Manage your expectations and always act with good behavior.</strong> (This is something I already knew, but it was a powerful reminder.)</li>
+<li><strong>God always provides a way.</strong> If you face a problem in one area, a solution will emerge in another. For instance, if someone lacks sight, their other senses become incredibly sharp.</li>
+<li><strong>Steer clear of political parties.</strong> They're often just trouble. Just vote for who you believe in.</li>
+<li><strong>Choose your companions wisely.</strong> Always surround yourself with good people, even if it means being alone sometimes.</li>
+<li><strong>Never pursue love or marriage based solely on phone interactions.</strong> It's often an illusion; the real world is entirely different.</li>
+<li><strong>Your mother is paramount.</strong> She carried you for nine months, enduring so much, and then showed you the world. Cherish her.</li>
+<li>He also taught me a lot about <strong>Karma</strong>.</li>
+</ul>
+</blockquote>
+<hr>
+<h1>Tech Wisdom from a Nonagenarian</h1>
+<p>Perhaps the most fascinating encounter was with an 85-year-old man who knew an incredible amount about computers – almost as much as a computer science student! He shared insights into computer evolution and even knew <strong>QBASIC</strong>, a language that's practically ancient now. He explained different types of printers and emphasized that to truly understand technology, "you have to know everything about everything. You should know instructions and all."</p>
+<p>He also gave me valuable advice on how to approach answers, especially in exams. He stressed the importance of incorporating <strong>modern trends</strong> to show the examiner you're well-read. For example, if you're writing about computer viruses, you should include examples of current virus names. He also touched upon versioning, explaining how different versions of software like Word or Excel (e.g., 2016) can complicate things. He gave a relatable example: we were taught what PowerPoint is and how it works, but we were rarely shown any practical demonstrations.</p>
+<p>This led to his core message: <strong>"Practical is the way. Just focus on practical rather than theory."</strong> I completely agree with him on this. Thank you, Buwa, for these invaluable lessons.</p>]]></content>
+        <author>
+            <name>Abishek Neupane</name>
+            <uri>https://github.com/virtualabishek</uri>
+        </author>
+        <category label="Philosophy" term="Philosophy"/>
+        <category label="Technical" term="Technical"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[From Chaos to Clarity]]></title>
         <id>https://blog.abishekn.com.np/blog/breaking-down-the-problem</id>
@@ -101,37 +132,6 @@ In this post, I’ll walk you through my Linux journey, from my early experiment
 <p>So, what I’m getting at is this: <strong>focus on the moment</strong>. Enjoy the process. I’m convinced that’s where real joy and happiness hide. Think about it—you forget where you left your keys, you miss an important moment because you’re zoned out, or you finally get something you’ve always wanted and feel that rush of pride. But do you remember how hard you worked for it? Probably not. Success has a way of wiping the slate clean. Then, boom, new desires pop up, and the cycle starts again.</p>
 <p>That’s life, right? An endless loop of wanting, chasing, and forgetting. We all know this deep down—it’s nothing groundbreaking. But living it? Actually <strong>staying present</strong>? That’s the tricky part.</p>
 <p>I’ll be real with you—I’m not even sure where I’m going with this. It’s just a stream of thoughts, typed out for fun. Hope you enjoyed it, though! Thanks for reading, and catch you in the next one.</p>]]></content>
-        <author>
-            <name>Abishek Neupane</name>
-            <uri>https://github.com/virtualabishek</uri>
-        </author>
-        <category label="Philosophy" term="Philosophy"/>
-        <category label="Non Technical" term="Non Technical"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Tech Wisdom and Village realitie]]></title>
-        <id>https://blog.abishekn.com.np/blog/tech-wisdom-from-a-85-year-old-buwa</id>
-        <link href="https://blog.abishekn.com.np/blog/tech-wisdom-from-a-85-year-old-buwa"/>
-        <updated>2025-04-02T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Tech Wisdom by 85 years old man and village realities]]></summary>
-        <content type="html"><![CDATA[<p>Okay, so here's the real talk: I always imagined villages as disciplined, polite, and honest places. But after a four-day tour to a rural area of Nepal, I've come to realize that villages can actually be more challenging than urban areas. It was quite a shock; everyone seemed to be comparing themselves to each other and constantly getting into conflicts. I stayed in more than six different houses, and almost every single one had some kind of underlying problem.</p>
-<p>Let me share some profound truths I learned from an 82-year-old man:</p>
-<blockquote>
-<ul>
-<li><strong>Manage your expectations and always act with good behavior.</strong> (This is something I already knew, but it was a powerful reminder.)</li>
-<li><strong>God always provides a way.</strong> If you face a problem in one area, a solution will emerge in another. For instance, if someone lacks sight, their other senses become incredibly sharp.</li>
-<li><strong>Steer clear of political parties.</strong> They're often just trouble. Just vote for who you believe in.</li>
-<li><strong>Choose your companions wisely.</strong> Always surround yourself with good people, even if it means being alone sometimes.</li>
-<li><strong>Never pursue love or marriage based solely on phone interactions.</strong> It's often an illusion; the real world is entirely different.</li>
-<li><strong>Your mother is paramount.</strong> She carried you for nine months, enduring so much, and then showed you the world. Cherish her.</li>
-<li>He also taught me a lot about <strong>Karma</strong>.</li>
-</ul>
-</blockquote>
-<hr>
-<h1>Tech Wisdom from a Nonagenarian</h1>
-<p>Perhaps the most fascinating encounter was with an 85-year-old man who knew an incredible amount about computers – almost as much as a computer science student! He shared insights into computer evolution and even knew <strong>QBASIC</strong>, a language that's practically ancient now. He explained different types of printers and emphasized that to truly understand technology, "you have to know everything about everything. You should know instructions and all."</p>
-<p>He also gave me valuable advice on how to approach answers, especially in exams. He stressed the importance of incorporating <strong>modern trends</strong> to show the examiner you're well-read. For example, if you're writing about computer viruses, you should include examples of current virus names. He also touched upon versioning, explaining how different versions of software like Word or Excel (e.g., 2016) can complicate things. He gave a relatable example: we were taught what PowerPoint is and how it works, but we were rarely shown any practical demonstrations.</p>
-<p>This led to his core message: <strong>"Practical is the way. Just focus on practical rather than theory."</strong> I completely agree with him on this. Thank you, Buwa, for these invaluable lessons.</p>]]></content>
         <author>
             <name>Abishek Neupane</name>
             <uri>https://github.com/virtualabishek</uri>
