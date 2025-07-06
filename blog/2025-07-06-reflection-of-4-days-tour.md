@@ -2,9 +2,9 @@
 slug: tech-wisdom-from-a-85-year-old-buwa
 title: "Tech Wisdom and Village realitie"
 authors: [virtualabishek]
-date: "2025-04-02"
+date: "2025-07-06"
 description: "Tech Wisdom by 85 years old man and village realities"
-tags: [philosophy, non-technical]
+tags: [philosophy, technical]
 ---
 
 # Village Realities: A Four-Day Revelation
