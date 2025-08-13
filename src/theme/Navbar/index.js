@@ -54,7 +54,9 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className={`${styles.navbar} ${isMenuOpen ? styles.menuOpen : ""}`}>
+    <nav
+      className={`navbar ${styles.navbar} ${isMenuOpen ? styles.menuOpen : ""}`}
+    >
       <div className={styles.navbarContent}>
         <Link to="/" className={styles.navbarBrand}>
           <span className={styles.brandText}>{siteConfig.title}</span>
