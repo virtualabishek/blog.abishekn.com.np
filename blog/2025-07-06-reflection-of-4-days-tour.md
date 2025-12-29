@@ -1,10 +1,10 @@
 ---
-slug: tech-wisdom-from-a-85-year-old-buwa
-title: "Tech Wisdom and Village realitie"
+slug: jwt-access-token-refresh-token-in-nestjs-ecommerce
+title: "Secure Authentication in NestJS E-Commerce: JWT, Access Tokens, and Refresh Tokens Explained"
 authors: [virtualabishek]
-date: "2025-07-06"
-description: "Tech Wisdom by 85 years old man and village realities"
-tags: [philosophy, technical]
+date: "2025-12-29"
+description: "A practical guide to implementing secure JWT-based authentication with access tokens and refresh tokens in a NestJS e-commerce project. Covers token generation, validation, refresh flow, security best practices, and real-world application in an online store."
+tags: [technical, nestjs, javascript, authentication, jwt, security, ecommerce, backend]
 ---
 
 # Village Realities: A Four-Day Revelation
