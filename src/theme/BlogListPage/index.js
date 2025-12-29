@@ -1,16 +1,15 @@
 import React from "react";
 import clsx from "clsx";
-import Link from "@docusaurus/Link"; // Add this import
+import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import {
   PageMetadata,
   HtmlClassNameProvider,
   ThemeClassNames,
-} from "@docusaurus/theme-common";
+} from "@docusaurus/theme-common/internal";
 import BlogLayout from "@theme/BlogLayout";
 import BlogListPaginator from "@theme/BlogListPaginator";
 import SearchMetadata from "@theme/SearchMetadata";
-import BlogListPageStructuredData from "./StructuredData";
 import styles from "./styles.module.css";
 
 function BlogListPageMetadata(props) {
@@ -138,7 +137,6 @@ export default function BlogListPage(props) {
       )}
     >
       <BlogListPageMetadata {...props} />
-      <BlogListPageStructuredData {...props} />
       <BlogListPageContent {...props} />
     </HtmlClassNameProvider>
   );

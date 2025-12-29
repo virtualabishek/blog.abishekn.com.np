@@ -2,7 +2,7 @@
 slug: how-google-use-spanner-for-distributed-database-management
 title: "Spanner - Google solution for distributed database in easier"
 authors: [virtualabishek]
-date: "2025-12-27"
+date: "2025-12-29"
 description: "I explored the paper - Spanner: Google’s Globally Distributed Database. This blog contains about the spanner in easier way to those who wants to learn about it"
 
 tags: [technical, database, distrubuted-database]

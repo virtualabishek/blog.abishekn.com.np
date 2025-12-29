@@ -32,3 +32,78 @@ philosophy:
   label: Philosophy
   permalink: /blog/tags/philosophy
   description: You can find all Philosophy related blogs here.
+
+# Database & Backend
+database:
+  label: Database
+  permalink: /blog/tags/database
+  description: Database concepts, tutorials, and comparisons.
+
+postgresql:
+  label: PostgreSQL
+  permalink: /blog/tags/postgresql
+  description: PostgreSQL tutorials and tips.
+
+distrubuted-database:
+  label: Distributed Database
+  permalink: /blog/tags/distributed-database
+  description: Distributed database systems and concepts.
+
+# JavaScript/NestJS
+nestjs:
+  label: NestJS
+  permalink: /blog/tags/nestjs
+  description: NestJS framework tutorials and guides.
+
+javascript:
+  label: JavaScript
+  permalink: /blog/tags/javascript
+  description: JavaScript programming posts.
+
+# Security & Auth
+authentication:
+  label: Authentication
+  permalink: /blog/tags/authentication
+  description: Authentication and authorization topics.
+
+jwt:
+  label: JWT
+  permalink: /blog/tags/jwt
+  description: JSON Web Token related posts.
+
+security:
+  label: Security
+  permalink: /blog/tags/security
+  description: Security best practices and concepts.
+
+# Projects
+ecommerce:
+  label: E-Commerce
+  permalink: /blog/tags/ecommerce
+  description: E-commerce development projects.
+
+backend:
+  label: Backend
+  permalink: /blog/tags/backend
+  description: Backend development posts.
+
+# Life & Travel
+life:
+  label: Life
+  permalink: /blog/tags/life
+  description: Life reflections and personal stories.
+
+travel:
+  label: Travel
+  permalink: /blog/tags/travel
+  description: Travel experiences and stories.
+
+nepal:
+  label: Nepal
+  permalink: /blog/tags/nepal
+  description: Posts about Nepal.
+
+betryed:
+  label: Betryed
+  permalink: /blog/tags/betryed
+  description: Personal reflections.
