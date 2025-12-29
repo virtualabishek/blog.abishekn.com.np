@@ -1,124 +1,212 @@
+/* Hero Section */
 .hero {
-  position: relative;
-  padding: 4rem 1rem;
-  text-align: center;
-  background: var(--ifm-background-color);
-  overflow: hidden;
-}
-
-.heroGlow {
-  position: absolute;
-  top: -50%;
-  left: 50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(
-    circle,
-    var(--ifm-color-primary) 10%,
-    transparent 50%
-  );
-  opacity: 0.15;
-  transform: translateX(-50%);
-  animation: glowPulse 8s infinite ease-in-out;
+  padding: 5rem 1.5rem 6rem;
+  background: linear-gradient(to bottom, var(--ifm-background-color), var(--ifm-color-emphasis-100));
 }
 
 .heroContent {
-  position: relative;
-  max-width: 800px;
+  max-width: 720px;
   margin: 0 auto;
 }
 
-.heroTitle {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--ifm-color-emphasis-900);
+.greeting {
+  display: inline-block;
+  font-size: 1.125rem;
+  color: var(--ifm-color-emphasis-700);
   margin-bottom: 1rem;
 }
 
-.wave {
-  display: inline-block;
-  animation: waveHand 2s infinite;
+.heroTitle {
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--ifm-color-emphasis-900);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+.name {
+  color: var(--ifm-color-primary);
 }
 
 .heroSubtitle {
   font-size: 1.25rem;
+  line-height: 1.6;
   color: var(--ifm-color-emphasis-700);
   margin-bottom: 2rem;
 }
 
-.highlight {
-  color: var(--ifm-color-primary);
-  font-weight: 600;
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.heroButton {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
   background: var(--ifm-color-primary);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.primaryButton:hover {
+  background: var(--ifm-color-primary-dark);
   color: white;
   text-decoration: none;
-  border-radius: 8px;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  transform: translateY(-1px);
 }
 
-.heroButton:hover {
-  background: var(--ifm-color-primary-dark);
-  transform: translateY(-2px);
-  color: white;
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  background: transparent;
+  color: var(--ifm-color-emphasis-800);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 10px;
+  transition: all 0.2s ease;
 }
 
-.about {
-  padding: 4rem 1rem;
+.secondaryButton:hover {
   background: var(--ifm-color-emphasis-100);
+  border-color: var(--ifm-color-emphasis-400);
+  color: var(--ifm-color-emphasis-900);
+  text-decoration: none;
 }
 
-.aboutTitle {
-  text-align: center;
-  font-size: 2rem;
+/* Topics Section */
+.topics {
+  padding: 4rem 1.5rem;
+  background: var(--ifm-background-color);
+}
+
+.topicsContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
   font-weight: 700;
   color: var(--ifm-color-emphasis-900);
-  margin-bottom: 2rem;
-  position: relative;
+  text-align: center;
+  margin-bottom: 2.5rem;
 }
 
-.aboutTitle::after {
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 4px;
-  background: var(--ifm-color-primary);
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 2px;
+.topicsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
-.aboutContent {
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-  color: var(--ifm-color-emphasis-800);
-  line-height: 1.6;
+.topicCard {
+  padding: 1.75rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 12px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  transition: all 0.2s ease;
 }
 
-.aboutContent p {
+.topicCard:hover {
+  border-color: var(--ifm-color-emphasis-300);
+  transform: translateY(-2px);
+}
+
+.topicEmoji {
+  font-size: 2rem;
+  display: block;
   margin-bottom: 1rem;
 }
 
-.aboutLink {
-  color: var(--ifm-color-primary);
-  text-decoration: none;
-  font-weight: 500;
+.topicTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-900);
+  margin-bottom: 0.5rem;
 }
 
-.aboutLink:hover {
-  text-decoration: underline;
+.topicDescription {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+}
+
+/* CTA Section */
+.cta {
+  padding: 4rem 1.5rem;
+  background: var(--ifm-color-emphasis-100);
+}
+
+.ctaContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.ctaContent {
+  flex: 1;
+}
+
+.ctaTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ifm-color-emphasis-900);
+  margin-bottom: 0.5rem;
+}
+
+.ctaText {
+  font-size: 1rem;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  background: var(--ifm-color-primary);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 10px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.ctaButton:hover {
+  background: var(--ifm-color-primary-dark);
+  color: white;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .topicsGrid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
   .hero {
-    padding: 2rem 1rem;
+    padding: 3rem 1.5rem 4rem;
   }
 
   .heroTitle {
@@ -126,37 +214,38 @@
   }
 
   .heroSubtitle {
-    font-size: 1rem;
+    font-size: 1.0625rem;
   }
 
-  .about {
-    padding: 2rem 1rem;
+  .heroButtons {
+    flex-direction: column;
   }
 
-  .aboutTitle {
+  .primaryButton,
+  .secondaryButton {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .topics {
+    padding: 3rem 1.5rem;
+  }
+
+  .sectionTitle {
     font-size: 1.5rem;
   }
-}
 
-@keyframes glowPulse {
-  0%,
-  100% {
-    opacity: 0.15;
+  .cta {
+    padding: 3rem 1.5rem;
   }
-  50% {
-    opacity: 0.25;
-  }
-}
 
-@keyframes waveHand {
-  0%,
-  100% {
-    transform: rotate(0deg);
+  .ctaContainer {
+    flex-direction: column;
+    text-align: center;
   }
-  25% {
-    transform: rotate(20deg);
-  }
-  75% {
-    transform: rotate(-20deg);
+
+  .ctaButton {
+    width: 100%;
+    justify-content: center;
   }
 }

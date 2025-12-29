@@ -1,57 +1,94 @@
 import React from "react";
-import clsx from "clsx";
 import Link from "@docusaurus/Link";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import Heading from "@theme/Heading";
 import styles from "./styles.module.css";
 
+function ArrowIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <line x1="5" y1="12" x2="19" y2="12" />
+      <polyline points="12 5 19 12 12 19" />
+    </svg>
+  );
+}
+
 function HeroSection() {
-  const { siteConfig } = useDocusaurusContext();
   return (
     <section className={styles.hero}>
-      <div className={styles.heroGlow}></div>
       <div className={styles.heroContent}>
+        <span className={styles.greeting}>Hey there! 👋</span>
         <h1 className={styles.heroTitle}>
-          Welcome to My Blog <span className={styles.wave}>✍️</span>
+          I'm <span className={styles.name}>Abishek</span>, a developer who loves building things and sharing knowledge
         </h1>
         <p className={styles.heroSubtitle}>
-          Hey, I’m Abishek! This is where I write about{" "}
-          <span className={styles.highlight}>tech adventures</span>,{" "}
-          <span className={styles.highlight}>life moments</span>, and random
-          thoughts.
+          Welcome to my corner of the internet where I write about technology, share my learning journey, 
+          and document the random thoughts that cross my mind.
         </p>
-        <Link to="/blog" className={styles.heroButton}>
-          Dive into the Posts
-        </Link>
+        <div className={styles.heroButtons}>
+          <Link to="/blog" className={styles.primaryButton}>
+            Read the Blog
+            <ArrowIcon />
+          </Link>
+          <a href="https://abishekn.com.np" target="_blank" rel="noopener noreferrer" className={styles.secondaryButton}>
+            View Portfolio
+          </a>
+        </div>
       </div>
     </section>
   );
 }
 
-function AboutBlog() {
+const topics = [
+  {
+    emoji: "💻",
+    title: "Tech & Development",
+    description: "Deep dives into programming concepts, tutorials, and my experiences with different technologies."
+  },
+  {
+    emoji: "📚",
+    title: "Learning Notes",
+    description: "Documenting what I learn about databases, distributed systems, and software architecture."
+  },
+  {
+    emoji: "🌍",
+    title: "Life & Travel",
+    description: "Personal stories, travel experiences, and reflections on life beyond the keyboard."
+  }
+];
+
+function TopicsSection() {
   return (
-    <section className={styles.about}>
-      <div className="container">
-        <Heading as="h2" className={styles.aboutTitle}>
-          About This Blog
-        </Heading>
-        <div className={styles.aboutContent}>
-          <p>
-            This isn’t just another tech blog. Here, you’ll find a mix of{" "}
-            <strong>techincal stuffs</strong>, personal{" "}
-            <strong>life updates</strong>, and some{" "}
-            <strong>non-technical musings</strong>—all straight from my head to
-            your screen. Whether I'm doing code, reflecting on life, or sharing
-            a random story, this space is my creative outlet.
-          </p>
-          <p>
-            Want to know more about me? Check out my{" "}
-            <Link to="https://abishekn.com.np" className={styles.aboutLink}>
-              portfolio
-            </Link>{" "}
-            for the professional stuff. This blog is where I let loose!
+    <section className={styles.topics}>
+      <div className={styles.topicsContainer}>
+        <h2 className={styles.sectionTitle}>What I Write About</h2>
+        <div className={styles.topicsGrid}>
+          {topics.map((topic, index) => (
+            <div key={index} className={styles.topicCard}>
+              <span className={styles.topicEmoji}>{topic.emoji}</span>
+              <h3 className={styles.topicTitle}>{topic.title}</h3>
+              <p className={styles.topicDescription}>{topic.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function LatestPostsCTA() {
+  return (
+    <section className={styles.cta}>
+      <div className={styles.ctaContainer}>
+        <div className={styles.ctaContent}>
+          <h2 className={styles.ctaTitle}>Ready to dive in?</h2>
+          <p className={styles.ctaText}>
+            Explore my latest articles on distributed databases, development workflows, 
+            and everything in between.
           </p>
         </div>
+        <Link to="/blog" className={styles.ctaButton}>
+          Browse All Posts
+          <ArrowIcon />
+        </Link>
       </div>
     </section>
   );
@@ -61,7 +98,8 @@ export default function Homepage() {
   return (
     <main>
       <HeroSection />
-      <AboutBlog />
+      <TopicsSection />
+      <LatestPostsCTA />
     </main>
   );
 }

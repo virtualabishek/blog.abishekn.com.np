@@ -1,10 +1,10 @@
 ---
-slug: jwt-access-token-refresh-token-in-nestjs-ecommerce
-title: "Secure Authentication in NestJS E-Commerce: JWT, Access Tokens, and Refresh Tokens Explained"
+slug: village-realities-four-day-revelation
+title: "Village Realities: A Four-Day Revelation"
 authors: [virtualabishek]
-date: "2025-12-29"
-description: "A practical guide to implementing secure JWT-based authentication with access tokens and refresh tokens in a NestJS e-commerce project. Covers token generation, validation, refresh flow, security best practices, and real-world application in an online store."
-tags: [technical, nestjs, javascript, authentication, jwt, security, ecommerce, backend]
+date: "2025-07-06"
+description: "Reflections from a four-day tour to rural Nepal - discovering the challenges and wisdom of village life through conversations with locals."
+tags: [non-technical, life, travel, nepal]
 ---
 
 # Village Realities: A Four-Day Revelation

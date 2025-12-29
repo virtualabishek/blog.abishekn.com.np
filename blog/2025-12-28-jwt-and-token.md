@@ -1,15 +1,11 @@
 ---
-slug: how-google-use-spanner-for-distributed-database-management
-title: "Spanner - Google solution for distributed database in easier"
+slug: jwt-access-token-refresh-token-in-nestjs-ecommerce
+title: "Secure Authentication in NestJS E-Commerce: JWT, Access Tokens, and Refresh Tokens Explained"
 authors: [virtualabishek]
-date: "2025-12-27"
-description: "I explored the paper - Spanner: Google’s Globally Distributed Database. This blog contains about the spanner in easier way to those who wants to learn about it"
-
-tags: [technical, database, distrubuted-database]
-
+date: "2025-12-29"
+description: "A practical guide to implementing secure JWT-based authentication with access tokens and refresh tokens in a NestJS e-commerce project. Covers token generation, validation, refresh flow, security best practices, and real-world application in an online store."
+tags: [technical, nestjs, javascript, authentication, jwt, security, ecommerce, backend]
 ---
-
-
 
 # JWT, Access Tokens & Refresh Tokens Explained
 
