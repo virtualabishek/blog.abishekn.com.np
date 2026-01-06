@@ -2,12 +2,56 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.abishekn.com.np/blog</id>
     <title>Abi's Blog</title>
-    <updated>2025-12-29T00:00:00.000Z</updated>
+    <updated>2026-01-06T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.abishekn.com.np/blog"/>
     <subtitle>Technical articles and personal thoughts by Abishek Neupane</subtitle>
     <icon>https://blog.abishekn.com.np/img/favicon.ico</icon>
-    <rights>Copyright © 2025 Abishek Neupane</rights>
+    <rights>Copyright © 2026 Abishek Neupane</rights>
+    <entry>
+        <title type="html"><![CDATA[eSewa vs Khalti: how I keep Nepali payments honest]]></title>
+        <id>https://blog.abishekn.com.np/blog/esewa-vs-khalti-secure-payment-flow-nepal</id>
+        <link href="https://blog.abishekn.com.np/blog/esewa-vs-khalti-secure-payment-flow-nepal"/>
+        <updated>2026-01-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ Explore the mostly used online payment gateways of Nepal: Esewa and Khalti and learned that anyone can change the payment amount in the browser. If we rely on that number, someone can buy a Rs 1000 item for Rs 1. Here is how I keep things honest with eSewa and Khalti.]]></summary>
+        <content type="html"><![CDATA[<p>I explored the mostly used online payment gateways of Nepal: Esewa and Khalti and learned that anyone can change the payment amount in the browser. If we rely on that number, someone can buy a Rs 1000 item for Rs 1. Here is how I keep things honest with eSewa and Khalti.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="why-the-paranoia">Why the paranoia?<a href="https://blog.abishekn.com.np/blog/esewa-vs-khalti-secure-payment-flow-nepal#why-the-paranoia" class="hash-link" aria-label="Direct link to Why the paranoia?" title="Direct link to Why the paranoia?">​</a></h2>
+<p>Browsers are editable. Inputs can be changed, scripts can be rerun, URLs can be faked. The only place that should decide whether money actually moved is your backend, not the page.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="esewa-signed-forms-with-hmac">eSewa: signed forms with HMAC<a href="https://blog.abishekn.com.np/blog/esewa-vs-khalti-secure-payment-flow-nepal#esewa-signed-forms-with-hmac" class="hash-link" aria-label="Direct link to eSewa: signed forms with HMAC" title="Direct link to eSewa: signed forms with HMAC">​</a></h2>
+<ul>
+<li>eSewa V2 gives you a secret key. You build a small string that includes the amount, product id, and that secret, then hash it with HMAC-SHA256.</li>
+<li>You post the amount plus that signature to eSewa. On their side, they recompute the same hash. If it matches, the request is legit; if a user tampered with the amount, it fails.</li>
+<li>After payment, eSewa redirects back with Base64 encoded JSON. I decode it, recompute the signature with my secret, and only then mark the order as paid. Anything that fails this check is logged and rejected.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="khalti-server-to-server-with-a-pidx">Khalti: server-to-server with a pidx<a href="https://blog.abishekn.com.np/blog/esewa-vs-khalti-secure-payment-flow-nepal#khalti-server-to-server-with-a-pidx" class="hash-link" aria-label="Direct link to Khalti: server-to-server with a pidx" title="Direct link to Khalti: server-to-server with a pidx">​</a></h2>
+<ul>
+<li>Khalti V2 is more API-first. My backend calls their API with <code>Authorization: Key &lt;secret&gt;</code> and the amount in paisa. Khalti responds with a <code>pidx</code> and a redirect URL.</li>
+<li>The user pays on Khalti. When they come back with <code>?pidx=...</code>, I do not trust that alone. I call Khalti again and ask, "What is the status of this pidx?" Only their response flips the order to PAID.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="quick-comparison">Quick comparison<a href="https://blog.abishekn.com.np/blog/esewa-vs-khalti-secure-payment-flow-nepal#quick-comparison" class="hash-link" aria-label="Direct link to Quick comparison" title="Direct link to Quick comparison">​</a></h2>
+<table><thead><tr><th>What</th><th>eSewa (V2)</th><th>Khalti (V2)</th></tr></thead><tbody><tr><td>Setup</td><td>HTML form + signature</td><td>Backend API call</td></tr><tr><td>Trust anchor</td><td>HMAC-SHA256 signature</td><td>Bearer token + pidx lookup</td></tr><tr><td>Final check</td><td>Recompute signature locally</td><td>Ask Khalti server for status</td></tr></tbody></table>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-i-actually-do-in-code">What I actually do in code<a href="https://blog.abishekn.com.np/blog/esewa-vs-khalti-secure-payment-flow-nepal#what-i-actually-do-in-code" class="hash-link" aria-label="Direct link to What I actually do in code" title="Direct link to What I actually do in code">​</a></h2>
+<ol>
+<li>When a user clicks Checkout, I fetch the merchant keys from a safe store (vault/env) and never expose them to the frontend.</li>
+<li>For eSewa, I sign the payload with HMAC-SHA256 before redirecting; on callback I decode, re-sign, and compare.</li>
+<li>For Khalti, I create the <code>pidx</code> server-side, redirect the user, and on callback I immediately call Khalti's verify endpoint.</li>
+<li>Only after these checks do I update the order to PAID. Anything mismatched becomes an audit log entry.</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="takeaways">Takeaways<a href="https://blog.abishekn.com.np/blog/esewa-vs-khalti-secure-payment-flow-nepal#takeaways" class="hash-link" aria-label="Direct link to Takeaways" title="Direct link to Takeaways">​</a></h2>
+<ul>
+<li>Never trust frontend amounts or statuses.</li>
+<li>Keep secrets off the browser; everything sensitive happens on the backend.</li>
+<li>Always verify after redirect: re-sign for eSewa, lookup for Khalti. Those two steps have saved me from fake Rs 1 checkouts.</li>
+</ul>]]></content>
+        <author>
+            <name>Abishek Neupane</name>
+            <uri>https://github.com/virtualabishek</uri>
+        </author>
+        <category label="Technical" term="Technical"/>
+        <category label="Security" term="Security"/>
+        <category label="Backend" term="Backend"/>
+        <category label="Payments" term="Payments"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Secure Authentication in NestJS E-Commerce: JWT, Access Tokens, and Refresh Tokens Explained]]></title>
         <id>https://blog.abishekn.com.np/blog/jwt-access-token-refresh-token-in-nestjs-ecommerce</id>
