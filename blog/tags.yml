@@ -107,3 +107,9 @@ betryed:
   label: Betryed
   permalink: /blog/tags/betryed
   description: Personal reflections.
+
+# Payments
+payments:
+  label: Payments
+  permalink: /blog/tags/payments
+  description: Payment gateways, eSewa, Khalti, and checkout lessons.
