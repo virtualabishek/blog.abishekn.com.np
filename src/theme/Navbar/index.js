@@ -92,7 +92,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""} ${isMenuOpen ? styles.menuOpen : ""}`}>
+    <nav className={`navbar ${styles.navbar} ${scrolled ? styles.scrolled : ""} ${isMenuOpen ? styles.menuOpen : ""}`}>
       <div className={styles.navbarContent}>
         <Link to="/" className={styles.navbarBrand}>
           <span className={styles.brandIcon}>A</span>

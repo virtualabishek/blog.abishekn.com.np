@@ -12,6 +12,10 @@
   transition: all 0.3s ease;
 }
 
+:global(.navbar) {
+  display: block;
+}
+
 [data-theme="dark"] .navbar {
   background: rgba(26, 27, 30, 0.9);
 }
