@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { useColorMode } from "@docusaurus/theme-common/internal";
+import DeprecationBanner from "@site/src/components/DeprecationBanner";
 import styles from "./styles.module.css";
 
 function MenuIcon() {
@@ -92,51 +93,54 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className={`navbar ${styles.navbar} ${scrolled ? styles.scrolled : ""} ${isMenuOpen ? styles.menuOpen : ""}`}>
-      <div className={styles.navbarContent}>
-        <Link to="/" className={styles.navbarBrand}>
-          <span className={styles.brandIcon}>A</span>
-          <span className={styles.brandText}>Abi's Blog</span>
-        </Link>
+    <>
+      <nav className={`navbar ${styles.navbar} ${scrolled ? styles.scrolled : ""} ${isMenuOpen ? styles.menuOpen : ""}`}>
+        <div className={styles.navbarContent}>
+          <Link to="/" className={styles.navbarBrand}>
+            <span className={styles.brandIcon}>A</span>
+            <span className={styles.brandText}>Abi's Blog</span>
+          </Link>
 
-        <div className={`${styles.navItems} ${isMenuOpen ? styles.show : ""}`}>
-          {navItems.map((item) => (
-            <Link
-              key={item.label}
-              to={item.to}
-              href={item.href}
-              className={styles.navLink}
-              onClick={() => setIsMenuOpen(false)}
-              {...(item.external && { target: "_blank", rel: "noopener noreferrer" })}
+          <div className={`${styles.navItems} ${isMenuOpen ? styles.show : ""}`}>
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                to={item.to}
+                href={item.href}
+                className={styles.navLink}
+                onClick={() => setIsMenuOpen(false)}
+                {...(item.external && { target: "_blank", rel: "noopener noreferrer" })}
+              >
+                {item.label}
+                {item.external && <ExternalLinkIcon />}
+              </Link>
+            ))}
+
+            <button
+              className={styles.themeToggle}
+              onClick={() => setColorMode(colorMode === "dark" ? "light" : "dark")}
+              aria-label={`Switch to ${colorMode === "dark" ? "light" : "dark"} mode`}
             >
-              {item.label}
-              {item.external && <ExternalLinkIcon />}
-            </Link>
-          ))}
-          
+              {colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
+            </button>
+          </div>
+
           <button
-            className={styles.themeToggle}
-            onClick={() => setColorMode(colorMode === "dark" ? "light" : "dark")}
-            aria-label={`Switch to ${colorMode === "dark" ? "light" : "dark"} mode`}
+            className={styles.menuButton}
+            onClick={(e) => {
+              e.stopPropagation();
+              setIsMenuOpen(!isMenuOpen);
+            }}
+            aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
           >
-            {colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
+            {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
           </button>
         </div>
 
-        <button
-          className={styles.menuButton}
-          onClick={(e) => {
-            e.stopPropagation();
-            setIsMenuOpen(!isMenuOpen);
-          }}
-          aria-label="Toggle menu"
-          aria-expanded={isMenuOpen}
-        >
-          {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
-        </button>
-      </div>
-      
-      {isMenuOpen && <div className={styles.backdrop} onClick={() => setIsMenuOpen(false)} />}
-    </nav>
+        {isMenuOpen && <div className={styles.backdrop} onClick={() => setIsMenuOpen(false)} />}
+      </nav>
+      <DeprecationBanner />
+    </>
   );
 }
